@@ -20,12 +20,13 @@ export default function SidebarMenu() {
         <span className="menu-icon">☰</span>
       </button>
       <Dialog open={open} onClose={() => setOpen(false)} className="sidebar-dialog">
-        <div className="sidebar-overlay" aria-hidden="true" onClick={() => setOpen(false)} />
+        <div className="sidebar-overlay" aria-hidden="true" onClick={() => setOpen(false)} style={{ zIndex: 1001 }} />
         <motion.div 
           className="sidebar-panel sidebar-panel-right"
           initial={{ x: '100%' }}
           animate={{ x: open ? 0 : '100%' }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          style={{ zIndex: 1002, position: 'fixed' }}
         >
           <button className="close-btn" onClick={() => setOpen(false)} aria-label="Cerrar menú">×</button>
           <nav className="sidebar-nav">

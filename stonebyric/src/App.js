@@ -1,16 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './App.css';
 import SidebarMenu from './SidebarMenu';
 import Topbar from './Topbar';
+import Gallery from './Gallery';
+import './App.css';
 
 function App() {
   return (
     <div className="landing-root">
       <SidebarMenu />
       <Topbar />
-      {/* Hero Section */}
-      <section className="hero">
+      {/* Hero Section (solo móvil) */}
+      <section className="hero mobile-only">
         <motion.div className="hero-content" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h1>Stone By Ric</h1>
           <p>Expertos en piedra natural y diseño de espacios únicos</p>
@@ -45,11 +46,7 @@ function App() {
       {/* Galería */}
       <section className="section gallery" id="galeria">
         <motion.h2 initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>Galería de Proyectos</motion.h2>
-        <div className="gallery-list">
-          <motion.img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Proyecto 1" whileHover={{ scale: 1.08 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }} />
-          <motion.img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80" alt="Proyecto 2" whileHover={{ scale: 1.08 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.7 }} />
-          <motion.img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Proyecto 3" whileHover={{ scale: 1.08 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.9 }} />
-        </div>
+        <Gallery />
       </section>
       {/* Testimonios */}
       <section className="section testimonials" id="testimonios">

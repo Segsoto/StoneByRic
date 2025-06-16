@@ -1,0 +1,20 @@
+.gallery-list {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+.gallery-list img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: transform 0.3s;
+}
+@media (min-width: 600px) {
+  .gallery-list img {
+    width: 240px;
+    height: 160px;
+  }
+}
