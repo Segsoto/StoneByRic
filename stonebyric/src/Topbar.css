@@ -1,0 +1,61 @@
+.topbar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 1002;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  gap: 1rem;
+}
+.topbar-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #bfa76a;
+  letter-spacing: 2px;
+}
+.topbar-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.topbar-link {
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.topbar-link:hover {
+  color: #bfa76a;
+}
+.topbar-social {
+  display: flex;
+  gap: 1rem;
+}
+.topbar-social-link {
+  font-size: 1.3rem;
+  color: #bfa76a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.topbar-social-link:hover {
+  color: #222;
+}
+@media (min-width: 900px) {
+  .topbar {
+    display: flex;
+  }
+  .menu-btn {
+    display: none !important;
+  }
+}
+@media (max-width: 899px) {
+  .topbar {
+    display: none !important;
+  }
+}

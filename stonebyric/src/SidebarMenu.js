@@ -16,15 +16,15 @@ export default function SidebarMenu() {
 
   return (
     <>
-      <button className="menu-btn" onClick={() => setOpen(true)} aria-label="Abrir menú">
+      <button className="menu-btn menu-btn-right" onClick={() => setOpen(true)} aria-label="Abrir menú">
         <span className="menu-icon">☰</span>
       </button>
       <Dialog open={open} onClose={() => setOpen(false)} className="sidebar-dialog">
         <div className="sidebar-overlay" aria-hidden="true" onClick={() => setOpen(false)} />
         <motion.div 
-          className="sidebar-panel"
-          initial={{ x: '-100%' }}
-          animate={{ x: open ? 0 : '-100%' }}
+          className="sidebar-panel sidebar-panel-right"
+          initial={{ x: '100%' }}
+          animate={{ x: open ? 0 : '100%' }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         >
           <button className="close-btn" onClick={() => setOpen(false)} aria-label="Cerrar menú">×</button>

@@ -2,11 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './App.css';
 import SidebarMenu from './SidebarMenu';
+import Topbar from './Topbar';
 
 function App() {
   return (
     <div className="landing-root">
       <SidebarMenu />
+      <Topbar />
       {/* Hero Section */}
       <section className="hero">
         <motion.div className="hero-content" initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>

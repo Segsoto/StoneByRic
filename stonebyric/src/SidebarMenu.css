@@ -1,7 +1,8 @@
 .menu-btn {
   position: fixed;
   top: 1.2rem;
-  left: 1.2rem;
+  right: 1.2rem;
+  left: auto;
   z-index: 1001;
   background: #fff;
   border: none;
@@ -37,17 +38,23 @@
 .sidebar-panel {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
+  left: auto;
   height: 100vh;
   width: 80vw;
   max-width: 320px;
   background: #fff;
-  box-shadow: 2px 0 16px rgba(0,0,0,0.12);
+  box-shadow: -2px 0 16px rgba(0,0,0,0.12);
   z-index: 1002;
   padding: 2.5rem 1.5rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   pointer-events: auto;
+}
+.sidebar-panel-right {
+  right: 0;
+  left: auto;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.12);
 }
 .close-btn {
   position: absolute;
@@ -75,8 +82,19 @@
 .sidebar-link:hover {
   color: #bfa76a;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .sidebar-panel {
     width: 320px;
+  }
+  .menu-btn {
+    display: none !important;
+  }
+}
+@media (max-width: 899px) {
+  .sidebar-panel {
+    width: 80vw;
+  }
+  .topbar {
+    display: none !important;
   }
 }
