@@ -1,0 +1,82 @@
+.menu-btn {
+  position: fixed;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 1001;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.menu-btn:active {
+  background: #f0e6d2;
+}
+.menu-icon {
+  color: #bfa76a;
+}
+.sidebar-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  pointer-events: auto;
+}
+.sidebar-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 80vw;
+  max-width: 320px;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.12);
+  z-index: 1002;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #bfa76a;
+  cursor: pointer;
+}
+.sidebar-nav {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.sidebar-link {
+  color: #222;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.sidebar-link:hover {
+  color: #bfa76a;
+}
+@media (min-width: 600px) {
+  .sidebar-panel {
+    width: 320px;
+  }
+}
