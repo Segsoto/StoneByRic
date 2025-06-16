@@ -20,7 +20,7 @@ export default function SidebarMenu() {
         <span className="menu-icon">☰</span>
       </button>
       <Dialog open={open} onClose={() => setOpen(false)} className="sidebar-dialog">
-        <Dialog.Overlay className="sidebar-overlay" />
+        <div className="sidebar-overlay" aria-hidden="true" onClick={() => setOpen(false)} />
         <motion.div 
           className="sidebar-panel"
           initial={{ x: '-100%' }}
