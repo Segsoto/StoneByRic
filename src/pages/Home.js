@@ -10,8 +10,6 @@ function Home() {
         <p className="animate__animated animate__fadeInUp animate__delay-1s">Expertos en piedra natural y diseño de espacios únicos</p>
         <a href="#contacto" className="btn animate__animated animate__fadeInUp animate__delay-2s">Contáctanos</a>
       </section>
-
-      {/* Servicios */}
       <section className="section" id="servicios">
         <h2 className="animate__animated animate__fadeInLeft">Nuestros Servicios</h2>
         <div className="services">
@@ -29,8 +27,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* Galería */}
       <section className="section" id="galeria">
         <h2 className="animate__animated animate__fadeInRight">Galería de Proyectos</h2>
         <div className="gallery">
@@ -39,8 +35,6 @@ function Home() {
           <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Proyecto 3" className="animate__animated animate__zoomIn animate__delay-2s" />
         </div>
       </section>
-
-      {/* Testimonios */}
       <section className="section" id="testimonios">
         <h2 className="animate__animated animate__fadeInLeft">Testimonios</h2>
         <div className="testimonials">
@@ -54,8 +48,6 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* Contacto */}
       <section className="section" id="contacto">
         <h2 className="animate__animated animate__fadeInRight">Contáctanos</h2>
         <form className="contact-form animate__animated animate__fadeInUp">
