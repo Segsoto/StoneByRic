@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
+.variable-proximity {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 4px 32px #000;
+  letter-spacing: 2px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 16px;
+  padding: 24px 48px;
+  z-index: 2;
+  display: inline-block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

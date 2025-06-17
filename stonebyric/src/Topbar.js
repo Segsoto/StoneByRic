@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Topbar.css';
 
 const links = [
-  { href: '#about', label: 'Sobre Nosotros' },
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#galeria', label: 'Galería' },
-  { href: '#testimonios', label: 'Testimonios' },
-  { href: '#contact', label: 'Contacto' },
+  { href: '/', label: 'Inicio' },
+  { href: '/about', label: 'Sobre Nosotros' },
+  { href: '/services', label: 'Servicios' },
+  { href: '/gallery', label: 'Galería' },
+  { href: '/testimonials', label: 'Testimonios' },
+  { href: '/contact', label: 'Contacto' },
 ];
 
 const social = [
@@ -18,12 +20,15 @@ const social = [
 export default function Topbar() {
   return (
     <header className="topbar">
-      <div className="topbar-logo">Stone By Ric</div>
+      <Link to="/" className="topbar-logo" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+        <img src="/LogoRick.png" alt="Logo Stone By Ric" style={{ height: 44, width: 44, objectFit: 'contain', borderRadius: 8 }} />
+        <span style={{ color: '#222', fontWeight: 700, fontSize: 22 }}>Stone By Ric</span>
+      </Link>
       <nav className="topbar-nav">
         {links.map(link => (
-          <a key={link.href} href={link.href} className="topbar-link">
+          <Link key={link.href} to={link.href} className="topbar-link">
             {link.label}
-          </a>
+          </Link>
         ))}
       </nav>
       <div className="topbar-social">

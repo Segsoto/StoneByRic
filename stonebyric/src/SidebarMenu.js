@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './SidebarMenu.css';
 
 const links = [
-  { href: '#about', label: 'Sobre Nosotros' },
-  { href: '#servicios', label: 'Servicios' },
-  { href: '#galeria', label: 'Galería' },
-  { href: '#testimonios', label: 'Testimonios' },
-  { href: '#contact', label: 'Contacto' },
+  { href: '/', label: 'Inicio' },
+  { href: '/about', label: 'Sobre Nosotros' },
+  { href: '/services', label: 'Servicios' },
+  { href: '/gallery', label: 'Galería' },
+  { href: '/testimonials', label: 'Testimonios' },
+  { href: '/contact', label: 'Contacto' },
+];
+
+const social = [
+  { href: 'https://www.facebook.com/', icon: '🌐', label: 'Facebook' },
+  { href: 'https://www.instagram.com/', icon: '📸', label: 'Instagram' },
+  { href: 'https://wa.me/50688888888', icon: '💬', label: 'WhatsApp' },
 ];
 
 export default function SidebarMenu() {
@@ -29,13 +37,24 @@ export default function SidebarMenu() {
           style={{ zIndex: 1002, position: 'fixed' }}
         >
           <button className="close-btn" onClick={() => setOpen(false)} aria-label="Cerrar menú">×</button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, margin: '24px 0 16px 0', justifyContent: 'center' }}>
+            <img src="/LogoRick.png" alt="Logo Stone By Ric" style={{ height: 44, width: 44, objectFit: 'contain', borderRadius: 8 }} />
+            <span style={{ color: '#fff', fontWeight: 700, fontSize: 22 }}>Stone By Ric</span>
+          </div>
           <nav className="sidebar-nav">
             {links.map(link => (
-              <a key={link.href} href={link.href} className="sidebar-link" onClick={() => setOpen(false)}>
+              <Link key={link.href} to={link.href} className="sidebar-link" onClick={() => setOpen(false)}>
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
+          <div className="sidebar-social" style={{ marginTop: 32, display: 'flex', justifyContent: 'center', gap: 18 }}>
+            {social.map(s => (
+              <a key={s.href} href={s.href} className="sidebar-social-link" target="_blank" rel="noopener noreferrer" aria-label={s.label} style={{ fontSize: 26 }}>
+                <span role="img" aria-label={s.label}>{s.icon}</span>
+              </a>
+            ))}
+          </div>
         </motion.div>
       </Dialog>
     </>

@@ -5,7 +5,7 @@
   left: 0;
   width: 100vw;
   height: 60px;
-  background: #fff;
+  background: #18181b;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   z-index: 1002;
   align-items: center;
@@ -16,22 +16,28 @@
 .topbar-logo {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #bfa76a;
+  color: #fff !important;
   letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.topbar-logo span {
+  color: #fff !important;
 }
 .topbar-nav {
   display: flex;
   gap: 1.5rem;
 }
 .topbar-link {
-  color: #222;
+  color: #fff;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.2s;
 }
 .topbar-link:hover {
-  color: #bfa76a;
+  color: #b1001a;
 }
 .topbar-social {
   display: flex;
@@ -39,7 +45,7 @@
 }
 .topbar-social-link {
   font-size: 1.3rem;
-  color: #bfa76a;
+  color: #b1001a;
   text-decoration: none;
   transition: color 0.2s;
 }

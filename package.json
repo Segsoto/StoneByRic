@@ -287,6 +287,7 @@
     "gopd": "^1.2.0",
     "graceful-fs": "^4.2.11",
     "graphemer": "^1.4.0",
+    "gsap": "^3.13.0",
     "gzip-size": "^6.0.0",
     "handle-thing": "^2.0.1",
     "harmony-reflect": "^1.6.2",

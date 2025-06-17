@@ -14,18 +14,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #18181b;
+  color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #b1001a;
 }
 
 @keyframes App-logo-spin {
@@ -40,18 +40,19 @@
 body {
   margin: 0;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  background: #f7f7f7;
-  color: #222;
+  background: #111112;
+  color: #fff;
 }
 
 .landing-root {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
+  background: #111112;
 }
 
 .hero {
-  background: linear-gradient(120deg, #222 60%, #bfa76a 100%);
+  background: linear-gradient(120deg, #18181b 60%, #b1001a 100%);
   color: #fff;
   padding: 3rem 1.5rem 2rem 1.5rem;
   text-align: center;
@@ -73,21 +74,21 @@ body {
 }
 
 .cta-btn {
-  background: #bfa76a;
-  color: #222;
+  background: #b1001a;
+  color: #fff;
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 30px;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   transition: background 0.2s;
   text-decoration: none;
 }
 
 .cta-btn:hover {
-  background: #e6c97a;
+  background: #ff1a3c;
 }
 
 .section {
@@ -99,7 +100,7 @@ body {
 .section h2 {
   font-size: 1.5rem;
   margin-bottom: 1.2rem;
-  color: #bfa76a;
+  color: #b1001a;
 }
 
 .service-list {
@@ -109,7 +110,9 @@ body {
 }
 
 .service-card {
-  background: #fff;
+  background: #18181b;
+  color: #fff;
+  border: 1px solid #222;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   padding: 1.2rem;
@@ -138,7 +141,9 @@ body {
 }
 
 .testimonial {
-  background: #fff;
+  background: #18181b;
+  color: #fff;
+  border: 1px solid #222;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 1rem;
@@ -154,13 +159,15 @@ body {
 .contact-form input, .contact-form textarea {
   padding: 0.8rem;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #b1001a;
+  background: #23232a;
+  color: #fff;
   font-size: 1rem;
 }
 
 .contact-form button {
-  background: #bfa76a;
-  color: #222;
+  background: #b1001a;
+  color: #fff;
   border: none;
   padding: 1rem;
   border-radius: 6px;
@@ -171,7 +178,7 @@ body {
 }
 
 .contact-form button:hover {
-  background: #e6c97a;
+  background: #ff1a3c;
 }
 
 .mobile-only {
@@ -193,5 +200,111 @@ body {
   .gallery-list img {
     width: 240px;
     height: 160px;
+  }
+}
+
+.services-page.services-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 8px;
+}
+
+.services-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 32px;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .services-page.services-wide {
+    max-width: 98vw;
+    padding: 24px 4vw;
+  }
+  .services-flex {
+    gap: 24px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-flex {
+    flex-direction: column;
+    gap: 18px 0;
+  }
+}
+
+.service-row-desktop {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  background: rgba(24,24,27,0.98);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  padding: 32px;
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.service-row-desktop:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.service-card-mobile {
+  background: rgba(24,24,27,0.98);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  padding: 24px;
+  margin: 0 auto;
+  max-width: 340px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .service-row-desktop {
+    max-width: 1100px;
+    padding: 32px;
+    border-radius: 24px;
+    gap: 48px;
+  }
+  .service-row-desktop img {
+    width: 340px;
+    height: 220px;
+    border-radius: 18px;
+  }
+  .service-row-desktop h3 {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+  .service-row-desktop p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 699px) {
+  .service-card-mobile {
+    max-width: 98vw;
+    min-height: unset;
+    padding: 18px 10px;
+    border-radius: 14px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.13);
+  }
+  .service-card-mobile img {
+    width: 100% !important;
+    height: 140px !important;
+    border-radius: 10px !important;
+    margin-bottom: 12px !important;
+  }
+  .service-card-mobile h3 {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  .service-card-mobile p {
+    font-size: 16px !important;
   }
 }

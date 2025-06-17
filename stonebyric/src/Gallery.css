@@ -11,6 +11,8 @@
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   transition: transform 0.3s;
+  border: 2px solid #b1001a;
+  background: #18181b;
 }
 @media (min-width: 600px) {
   .gallery-list img {
