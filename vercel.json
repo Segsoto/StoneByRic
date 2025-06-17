@@ -1,9 +1,1 @@
-{
-  "builds": [
-    { "src": "stonebyric/package.json", "use": "@vercel/static-build", "config": { "distDir": "stonebyric/build" } }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "stonebyric/build/$1" }
-  ],
-  "outputDirectory": "stonebyric/build"
-}
+{}
