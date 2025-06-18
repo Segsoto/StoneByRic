@@ -3,6 +3,52 @@ import gsap from 'gsap';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import VariableProximity from './VariableProximity';
+import { useLanguage } from './LanguageContext';
+
+const texts = {
+  es: {
+    hero: 'Bienvenido a Stone By Ric',
+    subtitle: 'Expertos en piedra, concreto y restauración',
+    cta: 'Contáctanos',
+    section1Title: 'Sobre nuestro trabajo',
+    section1Text: 'Expertos en piedra natural y diseño de espacios únicos. Descubre nuestros servicios, proyectos, testimonios y contáctanos para transformar tu espacio.',
+    section2Title: 'Sobre nuestro trabajo',
+    section2Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc.',
+    section3Title: 'Proyectos recientes',
+    section3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
+    section4Title: '¿Por qué elegirnos?',
+    section4List: [
+      'Calidad garantizada en cada proyecto',
+      'Equipo profesional y experimentado',
+      'Atención personalizada',
+      'Materiales de primera'
+    ],
+    section4Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
+    section5Title: 'Más información',
+    section5Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.'
+  },
+  en: {
+    hero: 'Welcome to Stone By Ric',
+    subtitle: 'Experts in stone, concrete and restoration',
+    cta: 'Contact Us',
+    section1Title: 'About Our Work',
+    section1Text: 'Experts in natural stone and unique space design. Discover our services, projects, testimonials, and contact us to transform your space.',
+    section2Title: 'About Our Work',
+    section2Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc.',
+    section3Title: 'Recent Projects',
+    section3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
+    section4Title: 'Why Choose Us?',
+    section4List: [
+      'Quality guaranteed in every project',
+      'Professional and experienced team',
+      'Personalized attention',
+      'Top quality materials'
+    ],
+    section4Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
+    section5Title: 'More Information',
+    section5Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.'
+  },
+};
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -13,6 +59,7 @@ export default function Home() {
   const floatRef = useRef(null);
   const animRef = useRef(null);
   const containerRef = useRef(null);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     function handleScroll() {
@@ -54,7 +101,7 @@ export default function Home() {
         ref={containerRef}
       >
         <VariableProximity
-          label={'Inicio'}
+          label={lang === 'es' ? 'Inicio' : 'Home'}
           className={'variable-proximity-demo'}
           fromFontVariationSettings="'wght' 400, 'opsz' 9"
           toFontVariationSettings="'wght' 1000, 'opsz' 40"
@@ -97,15 +144,15 @@ export default function Home() {
           />
           <div style={{ flex: 1, minWidth: 320, maxWidth: 600, display: 'flex', flexDirection: 'column', gap: 28 }}>
             <motion.h2 initial="hidden" animate="visible" variants={fadeIn} style={{ fontSize: 38, fontWeight: 700, marginBottom: 8 }}>
-              Bienvenido a Stone By Ric
+              {texts[lang].hero}
             </motion.h2>
             <motion.p initial="hidden" animate="visible" variants={fadeIn} style={{ fontSize: 20, lineHeight: 1.6 }}>
-              Expertos en piedra natural y diseño de espacios únicos. Descubre nuestros servicios, proyectos, testimonios y contáctanos para transformar tu espacio.
+              {texts[lang].section1Text}
             </motion.p>
           </div>
         </div>
         <motion.section initial="hidden" animate="visible" variants={fadeIn} style={{ fontSize: 20, marginBottom: 28, textAlign: 'center', maxWidth: 900, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.7 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
+          {texts[lang].section2Text}
         </motion.section>
         <div style={{ display: 'flex', gap: 56, flexWrap: 'wrap', marginBottom: 48 }}>
           <motion.div
@@ -116,9 +163,9 @@ export default function Home() {
             variants={fadeIn}
             custom={1}
           >
-            <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>Sobre nuestro trabajo</h2>
+            <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>{texts[lang].section2Title}</h2>
             <p style={{ fontSize: 20, lineHeight: 1.6 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc.
+              {texts[lang].section2Text}
             </p>
           </motion.div>
           <motion.div
@@ -129,29 +176,26 @@ export default function Home() {
             variants={fadeIn}
             custom={2}
           >
-            <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>Proyectos recientes</h2>
+            <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>{texts[lang].section3Title}</h2>
             <p style={{ fontSize: 20, lineHeight: 1.6 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
+              {texts[lang].section3Text}
             </p>
           </motion.div>
         </div>
         <div style={{ display: 'flex', alignItems: 'stretch', gap: 56, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 48 }}>
           <motion.div initial="hidden" animate="visible" variants={fadeIn} style={{ flex: 1, minWidth: 320, maxWidth: 600, display: 'flex', flexDirection: 'column', gap: 28, justifyContent: 'center' }}>
-            <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>¿Por qué elegirnos?</h2>
+            <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>{texts[lang].section4Title}</h2>
             <ul style={{ fontSize: 20, lineHeight: 1.6, marginBottom: 18 }}>
-              <li>Calidad garantizada en cada proyecto</li>
-              <li>Equipo profesional y experimentado</li>
-              <li>Atención personalizada</li>
-              <li>Materiales de primera</li>
+              {texts[lang].section4List.map((item, idx) => <li key={idx}>{item}</li>)}
             </ul>
             <p style={{ fontSize: 20, lineHeight: 1.6 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
+              {texts[lang].section4Text}
             </p>
           </motion.div>
           <motion.div initial="hidden" animate="visible" variants={fadeIn} style={{ flex: 1, minWidth: 320, maxWidth: 600, display: 'flex', flexDirection: 'column', gap: 28, justifyContent: 'center' }}>
-            <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>Más información</h2>
+            <h2 style={{ fontSize: 32, fontWeight: 700, marginBottom: 8 }}>{texts[lang].section5Title}</h2>
             <p style={{ fontSize: 20, lineHeight: 1.6 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.
+              {texts[lang].section5Text}
             </p>
           </motion.div>
         </div>

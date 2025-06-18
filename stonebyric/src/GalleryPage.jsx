@@ -2,8 +2,19 @@ import React from 'react';
 import Gallery from './Gallery';
 import { motion } from 'framer-motion';
 import VariableProximity from './VariableProximity';
+import { useLanguage } from './LanguageContext';
+
+const texts = {
+  es: {
+    hero: 'Galería de Proyectos',
+  },
+  en: {
+    hero: 'Project Gallery',
+  },
+};
 
 export default function GalleryPage() {
+  const { lang } = useLanguage();
   return (
     <>
       <section
@@ -20,7 +31,7 @@ export default function GalleryPage() {
         }}
       >
         <VariableProximity
-          label={'Galería de Proyectos'}
+          label={texts[lang].hero}
           className={'variable-proximity-demo'}
           fromFontVariationSettings="'wght' 400, 'opsz' 9"
           toFontVariationSettings="'wght' 1000, 'opsz' 40"
@@ -52,8 +63,8 @@ export default function GalleryPage() {
         }} />
       </section>
       <div className="section gallery-page">
-        <motion.h2 initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>Galería de Proyectos</motion.h2>
-        <Gallery />
+        <motion.h2 initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>{texts[lang].hero}</motion.h2>
+        <Gallery lang={lang} />
       </div>
     </>
   );

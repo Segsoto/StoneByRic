@@ -1,37 +1,54 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import VariableProximity from './VariableProximity';
+import { useLanguage } from './LanguageContext';
 
 const services = [
 	{
-		title: 'Walkways & Custom Patios',
+		title: { es: 'Caminos y Patios Personalizados', en: 'Walkways & Custom Patios' },
 		img: '/servicio1.jpg',
-		desc: 'We design and build custom walkways and patios with attention to detail and durability. From flagstone to pavers, we ensure a beautiful and long-lasting result for your outdoor space.',
+		desc: {
+			es: 'Diseñamos y construimos caminos y patios personalizados con atención al detalle y durabilidad. Desde piedra laja hasta adoquines, garantizamos un resultado hermoso y duradero para tu espacio exterior.',
+			en: 'We design and build custom walkways and patios with attention to detail and durability. From flagstone to pavers, we ensure a beautiful and long-lasting result for your outdoor space.',
+		},
 	},
 	{
-		title: 'Chimney Crowns & Fireplace Repair',
+		title: { es: 'Coronas de Chimenea y Reparación de Chimeneas', en: 'Chimney Crowns & Fireplace Repair' },
 		img: '/servicio2.jpg',
-		desc: 'Whether antique or new, we have the expertise to repair or build chimneys and fireplaces, ensuring safety and style for your home.',
+		desc: {
+			es: 'Ya sean antiguas o nuevas, tenemos la experiencia para reparar o construir chimeneas y hogares, asegurando seguridad y estilo para tu hogar.',
+			en: 'Whether antique or new, we have the expertise to repair or build chimneys and fireplaces, ensuring safety and style for your home.',
+		},
 	},
 	{
-		title: 'Driveway Install & Repair',
+		title: { es: 'Instalación y Reparación de Entradas', en: 'Driveway Install & Repair' },
 		img: '/servicio3.jpg',
-		desc: 'We install and repair gravel, asphalt, tar and chip driveways, always communicating with our clients to exceed expectations.',
+		desc: {
+			es: 'Instalamos y reparamos entradas de grava, asfalto, y más, siempre comunicándonos con nuestros clientes para superar expectativas.',
+			en: 'We install and repair gravel, asphalt, tar and chip driveways, always communicating with our clients to exceed expectations.',
+		},
 	},
 	{
-		title: 'Restoration & Cleaning of Stonework',
+		title: { es: 'Restauración y Limpieza de Piedra', en: 'Restoration & Cleaning of Stonework' },
 		img: '/servicio4.jpg',
-		desc: 'Our team revives the color and finish of existing stonework with the right combination of skill, tools, and products. See the before and after difference!',
+		desc: {
+			es: 'Nuestro equipo revive el color y acabado de la piedra existente con la combinación adecuada de habilidad, herramientas y productos. ¡Mira la diferencia del antes y después!',
+			en: 'Our team revives the color and finish of existing stonework with the right combination of skill, tools, and products. See the before and after difference!',
+		},
 	},
 	{
-		title: 'Snow Removal',
+		title: { es: 'Remoción de Nieve', en: 'Snow Removal' },
 		img: '/remuevenieves.png',
-		desc: 'We manage snow removal for residential and commercial properties with our own fleet and team, ensuring your property is safe and accessible all winter.',
+		desc: {
+			es: 'Gestionamos la remoción de nieve para propiedades residenciales y comerciales con nuestro propio equipo, asegurando que tu propiedad esté segura y accesible todo el invierno.',
+			en: 'We manage snow removal for residential and commercial properties with our own fleet and team, ensuring your property is safe and accessible all winter.',
+		},
 	},
 ];
 
 export default function Services() {
 	const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
+	const { lang } = useLanguage();
 
 	useEffect(() => {
 		const handleResize = () => setIsMobile(window.innerWidth < 700);
@@ -55,7 +72,7 @@ export default function Services() {
 				}}
 			>
 				<VariableProximity
-					label={'Servicios'}
+					label={lang === 'es' ? 'Servicios' : 'Services'}
 					className={'variable-proximity-demo'}
 					fromFontVariationSettings="'wght' 400, 'opsz' 9"
 					toFontVariationSettings="'wght' 1000, 'opsz' 40"
@@ -123,7 +140,7 @@ export default function Services() {
 							>
 								<img
 									src={srv.img}
-									alt={srv.title}
+									alt={srv.title[lang]}
 									style={{
 										width: '100%',
 										height: 140,
@@ -141,9 +158,9 @@ export default function Services() {
 										marginBottom: 10,
 									}}
 								>
-									{srv.title}
+									{srv.title[lang]}
 								</h3>
-								<p style={{ fontSize: 16 }}>{srv.desc}</p>
+								<p style={{ fontSize: 16 }}>{srv.desc[lang]}</p>
 							</motion.div>
 						))}
 					</div>
@@ -163,7 +180,7 @@ export default function Services() {
 							>
 								<img
 									src={srv.img}
-									alt={srv.title}
+									alt={srv.title[lang]}
 									style={{
 										width: 340,
 										height: 220,
@@ -188,10 +205,10 @@ export default function Services() {
 											marginBottom: 16,
 										}}
 									>
-										{srv.title}
+										{srv.title[lang]}
 									</h3>
 									<p style={{ fontSize: 18, lineHeight: 1.7 }}>
-										{srv.desc}
+										{srv.desc[lang]}
 									</p>
 								</div>
 							</motion.div>
