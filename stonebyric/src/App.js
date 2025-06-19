@@ -8,6 +8,7 @@ import Services from './Services';
 import GalleryPage from './GalleryPage';
 import Testimonials from './Testimonials';
 import Contact from './Contact';
+import Footer from './Footer';
 import './App.css';
 
 function App() {
@@ -24,9 +25,7 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <footer className="footer">
-          <p>© {new Date().getFullYear()} Stone By Ric. Todos los derechos reservados.</p>
-        </footer>
+        <Footer />
       </div>
     </Router>
   );

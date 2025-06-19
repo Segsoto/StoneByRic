@@ -100,27 +100,6 @@ export default function Home() {
         }}
         ref={containerRef}
       >
-        <VariableProximity
-          label={lang === 'es' ? 'Inicio' : 'Home'}
-          className={'variable-proximity-demo'}
-          fromFontVariationSettings="'wght' 400, 'opsz' 9"
-          toFontVariationSettings="'wght' 1000, 'opsz' 40"
-          containerRef={null}
-          radius={100}
-          falloff='linear'
-          style={{
-            fontSize: 56,
-            fontWeight: 900,
-            color: '#fff',
-            textShadow: '0 4px 32px #000',
-            letterSpacing: 2,
-            zIndex: 2,
-            display: 'inline-block',
-            background: 'none',
-            borderRadius: 0,
-            padding: 0,
-          }}
-        />
         <div style={{
           position: 'absolute',
           top: 0,
@@ -131,6 +110,52 @@ export default function Home() {
           zIndex: 1,
           borderRadius: 0,
         }} />
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 2,
+          }}
+        >
+          <div style={{
+            transform: 'translateX(-18px)',
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <VariableProximity
+              label={lang === 'es' ? 'Inicio' : 'Home'}
+              className={'variable-proximity variable-proximity-demo'}
+              fromFontVariationSettings="'wght' 400, 'opsz' 9"
+              toFontVariationSettings="'wght' 1000, 'opsz' 40"
+              containerRef={null}
+              radius={100}
+              falloff='linear'
+              style={{
+                fontSize: 48,
+                fontWeight: 900,
+                color: '#fff',
+                textShadow: '0 4px 32px #000',
+                letterSpacing: 2,
+                zIndex: 2,
+                display: 'inline-block',
+                background: 'none',
+                borderRadius: 0,
+                padding: 0,
+                textAlign: 'center',
+                width: '100%',
+                maxWidth: 320,
+              }}
+            />
+          </div>
+        </div>
       </section>
       <div className="section home-page" style={{ maxWidth: 1400, margin: '0 auto', padding: '40px 16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 56, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 48 }}>

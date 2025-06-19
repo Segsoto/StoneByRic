@@ -54,22 +54,6 @@ export default function Contact() {
           marginBottom: 48,
         }}
       >
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          style={{
-            color: '#fff',
-            fontSize: 48,
-            fontWeight: 900,
-            zIndex: 2,
-            textShadow: '0 4px 32px #000',
-            letterSpacing: 2,
-            margin: 0,
-          }}
-        >
-          {texts[lang].title}
-        </motion.h2>
         <div style={{
           position: 'absolute',
           top: 0,
@@ -79,6 +63,44 @@ export default function Contact() {
           background: 'rgba(0,0,0,0.45)',
           zIndex: 1,
         }} />
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 2,
+          }}
+        >
+          <div style={{
+            transform: 'translateX(-18px)',
+            width: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            <motion.h2
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              style={{
+                color: '#fff',
+                fontSize: 48,
+                fontWeight: 900,
+                zIndex: 2,
+                textShadow: '0 4px 32px #000',
+                letterSpacing: 2,
+                margin: 0,
+              }}
+            >
+              {texts[lang].title}
+            </motion.h2>
+          </div>
+        </div>
       </section>
       <div className="section contact-page">
         <motion.form 
