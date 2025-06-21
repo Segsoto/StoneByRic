@@ -5,43 +5,43 @@ import { useLanguage } from './LanguageContext';
 
 const services = [
 	{
-		title: { es: 'Caminos y Patios Personalizados', en: 'Walkways & Custom Patios' },
+		title: { es: 'Desarrollo Web a Medida', en: 'Custom Web Development' },
 		img: '/servicio1.jpg',
 		desc: {
-			es: 'Diseñamos y construimos caminos y patios personalizados con atención al detalle y durabilidad. Desde piedra laja hasta adoquines, garantizamos un resultado hermoso y duradero para tu espacio exterior.',
-			en: 'We design and build custom walkways and patios with attention to detail and durability. From flagstone to pavers, we ensure a beautiful and long-lasting result for your outdoor space.',
+			es: 'Creamos sitios web modernos, responsivos y optimizados para tu negocio. Desde landing pages hasta plataformas complejas, nos adaptamos a tus necesidades.',
+			en: 'We create modern, responsive, and optimized websites for your business. From landing pages to complex platforms, we adapt to your needs.',
 		},
 	},
 	{
-		title: { es: 'Coronas de Chimenea y Reparación de Chimeneas', en: 'Chimney Crowns & Fireplace Repair' },
+		title: { es: 'Aplicaciones y Sistemas', en: 'Apps & Systems' },
 		img: '/servicio2.jpg',
 		desc: {
-			es: 'Ya sean antiguas o nuevas, tenemos la experiencia para reparar o construir chimeneas y hogares, asegurando seguridad y estilo para tu hogar.',
-			en: 'Whether antique or new, we have the expertise to repair or build chimneys and fireplaces, ensuring safety and style for your home.',
+			es: 'Desarrollamos aplicaciones web y sistemas de gestión personalizados para automatizar procesos y mejorar la eficiencia de tu empresa.',
+			en: 'We develop custom web apps and management systems to automate processes and improve your company’s efficiency.',
 		},
 	},
 	{
-		title: { es: 'Instalación y Reparación de Entradas', en: 'Driveway Install & Repair' },
+		title: { es: 'E-commerce y Tiendas Online', en: 'E-commerce & Online Stores' },
 		img: '/servicio3.jpg',
 		desc: {
-			es: 'Instalamos y reparamos entradas de grava, asfalto, y más, siempre comunicándonos con nuestros clientes para superar expectativas.',
-			en: 'We install and repair gravel, asphalt, tar and chip driveways, always communicating with our clients to exceed expectations.',
+			es: 'Lleva tu negocio al mundo digital con tiendas online seguras, escalables y fáciles de administrar. Integración con pagos y logística.',
+			en: 'Take your business online with secure, scalable, and easy-to-manage e-commerce solutions. Payment and logistics integration included.',
 		},
 	},
 	{
-		title: { es: 'Restauración y Limpieza de Piedra', en: 'Restoration & Cleaning of Stonework' },
+		title: { es: 'Mantenimiento y Soporte', en: 'Maintenance & Support' },
 		img: '/servicio4.jpg',
 		desc: {
-			es: 'Nuestro equipo revive el color y acabado de la piedra existente con la combinación adecuada de habilidad, herramientas y productos. ¡Mira la diferencia del antes y después!',
-			en: 'Our team revives the color and finish of existing stonework with the right combination of skill, tools, and products. See the before and after difference!',
+			es: 'Ofrecemos mantenimiento, actualizaciones y soporte técnico para que tu sitio o app siempre funcione al máximo.',
+			en: 'We offer maintenance, updates, and technical support so your site or app always runs at its best.',
 		},
 	},
 	{
-		title: { es: 'Remoción de Nieve', en: 'Snow Removal' },
+		title: { es: 'Consultoría Digital', en: 'Digital Consulting' },
 		img: '/remuevenieves.png',
 		desc: {
-			es: 'Gestionamos la remoción de nieve para propiedades residenciales y comerciales con nuestro propio equipo, asegurando que tu propiedad esté segura y accesible todo el invierno.',
-			en: 'We manage snow removal for residential and commercial properties with our own fleet and team, ensuring your property is safe and accessible all winter.',
+			es: 'Te asesoramos en transformación digital, estrategia web y mejores prácticas para potenciar tu presencia online.',
+			en: 'We advise you on digital transformation, web strategy, and best practices to boost your online presence.',
 		},
 	},
 ];
@@ -63,7 +63,7 @@ export default function Services() {
 				style={{
 					width: '100vw',
 					minHeight: '320px',
-					background: `url('/fondo3.jpg') center/cover no-repeat`,
+					background: `url('/FONDOINICIO.jpg') center/cover no-repeat`,
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'center',

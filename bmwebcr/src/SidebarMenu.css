@@ -4,7 +4,7 @@
   right: 1.2rem;
   left: auto;
   z-index: 1001;
-  background: #18181b;
+  background: var(--color-secondary);
   border: none;
   border-radius: 50%;
   width: 44px;
@@ -18,10 +18,10 @@
   transition: background 0.2s;
 }
 .menu-btn:active {
-  background: #b1001a;
+  background: var(--color-primary);
 }
 .menu-icon {
-  color: #b1001a;
+  color: var(--color-primary);
 }
 .sidebar-dialog {
   position: fixed;
@@ -43,7 +43,7 @@
   height: 100vh;
   width: 80vw;
   max-width: 320px;
-  background: #18181b;
+  background: var(--color-secondary);
   box-shadow: -2px 0 16px rgba(0,0,0,0.12);
   z-index: 1002;
   padding: 2.5rem 1.5rem 1.5rem 1.5rem;
@@ -97,14 +97,14 @@
   gap: 18px;
 }
 .sidebar-link {
-  color: #fff;
+  color: var(--color-bg-light);
   font-size: 1.2rem;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
 .sidebar-link:hover {
-  color: #b1001a;
+  color: var(--color-accent-orange);
 }
 .sidebar-social {
   margin-top: 32px;
@@ -121,8 +121,8 @@
   color: #b1001a;
 }
 .lang-btn {
-  background: #b1001a;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-bg-light);
   border: none;
   border-radius: 20px;
   padding: 8px 22px;
@@ -136,7 +136,7 @@
   outline-offset: 2px;
 }
 .lang-btn:hover, .lang-btn:focus {
-  background: #fff;
+  background: var(--color-accent-orange);
   color: #b1001a;
   transform: scale(1.08);
 }

@@ -1,5 +1,5 @@
 {
-  "name": "stonebyric",
+  "name": "bmwebcr",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
@@ -859,15 +859,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Segsoto/StoneByRic.git"
+    "url": "git+https://github.com/Segsoto/bmwebcr.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Segsoto/StoneByRic/issues"
+    "url": "https://github.com/Segsoto/bmwebcr/issues"
   },
-  "homepage": "https://github.com/Segsoto/StoneByRic#readme",
+  "homepage": "https://github.com/Segsoto/bmwebcr#readme",
   "browserslist": {
     "production": [
       ">0.2%",

@@ -1,3 +1,12 @@
+:root {
+  --color-primary: #004AAD;
+  --color-secondary: #1F1F1F;
+  --color-bg-light: #F5F5F5;
+  --color-text-main: #333333;
+  --color-accent-green: #2ECC71;
+  --color-accent-orange: #FF6B35;
+}
+
 .App {
   text-align: center;
 }
@@ -14,8 +23,8 @@
 }
 
 .App-header {
-  background-color: #18181b;
-  color: #fff;
+  background-color: var(--color-secondary);
+  color: var(--color-bg-light);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,22 +47,23 @@
 }
 
 body {
-  margin: 0;
+  background: var(--color-bg-light);
+  color: var(--color-text-main);
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  background: #111112;
-  color: #fff;
+  margin: 0;
 }
 
 .landing-root {
+  background: var(--color-bg-light);
+  color: var(--color-text-main);
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  background: #111112;
 }
 
 .hero {
-  background: linear-gradient(120deg, #18181b 60%, #b1001a 100%);
-  color: #fff;
+  background: linear-gradient(120deg, var(--color-primary) 60%, var(--color-accent-orange) 100%);
+  color: var(--color-bg-light);
   padding: 3rem 1.5rem 2rem 1.5rem;
   text-align: center;
   display: flex;
@@ -74,8 +84,8 @@ body {
 }
 
 .cta-btn {
-  background: #b1001a;
-  color: #fff;
+  background: var(--color-accent-green);
+  color: var(--color-bg-light);
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 30px;
@@ -88,7 +98,7 @@ body {
 }
 
 .cta-btn:hover {
-  background: #ff1a3c;
+  background: var(--color-accent-orange);
 }
 
 .section {
@@ -100,7 +110,7 @@ body {
 .section h2 {
   font-size: 1.5rem;
   margin-bottom: 1.2rem;
-  color: #b1001a;
+  color: var(--color-primary);
 }
 
 .service-list {
@@ -110,9 +120,9 @@ body {
 }
 
 .service-card {
-  background: #18181b;
-  color: #fff;
-  border: 1px solid #222;
+  background: var(--color-secondary);
+  color: var(--color-bg-light);
+  border: 1px solid var(--color-primary);
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   padding: 1.2rem;
@@ -141,9 +151,9 @@ body {
 }
 
 .testimonial {
-  background: #18181b;
-  color: #fff;
-  border: 1px solid #222;
+  background: var(--color-secondary);
+  color: var(--color-bg-light);
+  border: 1px solid var(--color-primary);
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 1rem;
@@ -159,15 +169,15 @@ body {
 .contact-form input, .contact-form textarea {
   padding: 0.8rem;
   border-radius: 6px;
-  border: 1px solid #b1001a;
-  background: #23232a;
-  color: #fff;
+  border: 1px solid var(--color-primary);
+  background: var(--color-bg-light);
+  color: var(--color-text-main);
   font-size: 1rem;
 }
 
 .contact-form button {
-  background: #b1001a;
-  color: #fff;
+  background: var(--color-accent-green);
+  color: var(--color-bg-light);
   border: none;
   padding: 1rem;
   border-radius: 6px;
@@ -178,7 +188,7 @@ body {
 }
 
 .contact-form button:hover {
-  background: #ff1a3c;
+  background: var(--color-accent-orange);
 }
 
 .mobile-only {

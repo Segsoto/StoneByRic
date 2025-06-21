@@ -7,46 +7,46 @@ import { useLanguage } from './LanguageContext';
 
 const texts = {
   es: {
-    hero: 'Bienvenido a Stone By Ric',
-    subtitle: 'Expertos en piedra, concreto y restauración',
+    hero: 'Bienvenido a BMWebSolutions Cr',
+    subtitle: 'Expertos en desarrollo web y soluciones digitales',
     cta: 'Contáctanos',
     section1Title: 'Sobre nuestro trabajo',
-    section1Text: 'Expertos en piedra natural y diseño de espacios únicos. Descubre nuestros servicios, proyectos, testimonios y contáctanos para transformar tu espacio.',
-    section2Title: 'Sobre nuestro trabajo',
-    section2Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc.',
+    section1Text: 'Expertos en desarrollo web, diseño de aplicaciones y soluciones digitales a medida. Descubre nuestros servicios, proyectos y contáctanos para impulsar tu presencia online.',
+    section2Title: '¿Por qué elegirnos?',
+    section2Text: 'En BMWebSolutions Cr nos especializamos en crear sitios web modernos, aplicaciones personalizadas y plataformas digitales que ayudan a tu empresa a crecer. Nuestro equipo combina creatividad, tecnología y experiencia para ofrecer resultados de alto impacto.',
     section3Title: 'Proyectos recientes',
-    section3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
-    section4Title: '¿Por qué elegirnos?',
+    section3Text: 'Conoce algunos de nuestros desarrollos más recientes: desde páginas corporativas hasta sistemas de gestión y tiendas en línea.',
+    section4Title: 'Ventajas de trabajar con nosotros',
     section4List: [
       'Calidad garantizada en cada proyecto',
-      'Equipo profesional y experimentado',
-      'Atención personalizada',
-      'Materiales de primera'
+      'Equipo profesional y experimentado en tecnología',
+      'Atención personalizada y soporte continuo',
+      'Soluciones innovadoras y escalables'
     ],
-    section4Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
+    section4Text: 'Nuestro compromiso es tu éxito digital. Trabajamos contigo en cada etapa del proyecto para asegurar resultados que superen tus expectativas.',
     section5Title: 'Más información',
-    section5Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.'
+    section5Text: '¿Listo para transformar tu negocio? Contáctanos y recibe una asesoría gratuita sobre tu próximo proyecto digital.'
   },
   en: {
-    hero: 'Welcome to Stone By Ric',
-    subtitle: 'Experts in stone, concrete and restoration',
+    hero: 'Welcome to BMWebSolutions Cr',
+    subtitle: 'Experts in web development and digital solutions',
     cta: 'Contact Us',
     section1Title: 'About Our Work',
-    section1Text: 'Experts in natural stone and unique space design. Discover our services, projects, testimonials, and contact us to transform your space.',
-    section2Title: 'About Our Work',
-    section2Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc.',
+    section1Text: 'Experts in web development, app design, and custom digital solutions. Discover our services, projects, and contact us to boost your online presence.',
+    section2Title: 'Why Choose Us?',
+    section2Text: 'At BMWebSolutions Cr we specialize in creating modern websites, custom applications, and digital platforms that help your business grow. Our team combines creativity, technology, and experience to deliver high-impact results.',
     section3Title: 'Recent Projects',
-    section3Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam nisl nunc euismod nunc. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
-    section4Title: 'Why Choose Us?',
+    section3Text: 'Check out some of our latest developments: from corporate websites to management systems and online stores.',
+    section4Title: 'Advantages of working with us',
     section4List: [
       'Quality guaranteed in every project',
-      'Professional and experienced team',
-      'Personalized attention',
-      'Top quality materials'
+      'Professional and experienced tech team',
+      'Personalized attention and ongoing support',
+      'Innovative and scalable solutions'
     ],
-    section4Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Mauris euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.',
+    section4Text: 'Our commitment is your digital success. We work with you at every stage to ensure results that exceed your expectations.',
     section5Title: 'More Information',
-    section5Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, euismod euismod nisi nisi euismod.'
+    section5Text: 'Ready to transform your business? Contact us and get a free consultation for your next digital project.'
   },
 };
 
@@ -87,11 +87,11 @@ export default function Home() {
   return (
     <>
       <section
-        className="hero hero-inicio"
+        className="hero hero-home"
         style={{
           width: '100vw',
           minHeight: '320px',
-          background: `url('/fondo1.jpg') center/cover no-repeat`,
+          background: `url('/FONDOINICIO.jpg') center/cover no-repeat`,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -160,8 +160,8 @@ export default function Home() {
       <div className="section home-page" style={{ maxWidth: 1400, margin: '0 auto', padding: '40px 16px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 56, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 48 }}>
           <motion.img
-            src="/LogoRick.png"
-            alt="Logo Stone By Ric"
+            src="/LOGOPNG.png"
+            alt="Logo BMWebSolutions Cr"
             style={{ width: 320, height: 320, objectFit: 'contain', borderRadius: 32, boxShadow: '0 4px 32px rgba(0,0,0,0.18)', background: '#18181b' }}
             initial="hidden"
             animate="visible"
@@ -222,6 +222,31 @@ export default function Home() {
             <p style={{ fontSize: 20, lineHeight: 1.6 }}>
               {texts[lang].section5Text}
             </p>
+            <Link to="/contact" style={{ alignSelf: 'center', marginTop: 18, textDecoration: 'none' }}>
+              <button
+                style={{
+                  background: 'linear-gradient(90deg, #004AAD 60%, #2ECC71 100%)',
+                  color: '#fff',
+                  fontWeight: 700,
+                  fontSize: 22,
+                  padding: '16px 38px',
+                  border: 'none',
+                  borderRadius: 12,
+                  boxShadow: '0 4px 24px rgba(0,0,0,0.18)',
+                  cursor: 'pointer',
+                  transition: 'background 0.2s, transform 0.2s',
+                  letterSpacing: 1,
+                  outline: 'none',
+                  marginTop: 8,
+                  textShadow: '0 2px 8px #004AAD',
+                  minWidth: 220,
+                }}
+                onMouseOver={e => e.currentTarget.style.background = 'linear-gradient(90deg, #2ECC71 60%, #004AAD 100%)'}
+                onMouseOut={e => e.currentTarget.style.background = 'linear-gradient(90deg, #004AAD 60%, #2ECC71 100%)'}
+              >
+                {texts[lang].cta}
+              </button>
+            </Link>
           </motion.div>
         </div>
       </div>

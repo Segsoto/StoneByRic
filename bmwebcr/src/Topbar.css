@@ -5,6 +5,7 @@
   width: 100%;
   padding: 0 32px;
   box-sizing: border-box;
+  background: var(--color-primary);
 }
 .topbar-logo {
   display: flex;
@@ -12,11 +13,11 @@
   gap: 10px;
   font-size: 1.3rem;
   font-weight: bold;
-  color: #fff !important;
+  color: var(--color-primary) !important;
   letter-spacing: 2px;
 }
 .topbar-logo span {
-  color: #fff !important;
+  color: var(--color-primary) !important;
 }
 .topbar-nav {
   display: flex;
@@ -27,14 +28,14 @@
   margin: 0;
 }
 .topbar-link {
-  color: #fff;
+  color: var(--color-bg-light);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.2s;
 }
 .topbar-link:hover {
-  color: #b1001a;
+  color: var(--color-accent-orange);
 }
 .topbar-social {
   display: flex;
@@ -45,16 +46,16 @@
 }
 .topbar-social-link {
   font-size: 1.3rem;
-  color: #b1001a;
+  color: var(--color-accent-green);
   text-decoration: none;
   transition: color 0.2s;
 }
 .topbar-social-link:hover {
-  color: #222;
+  color: var(--color-accent-orange);
 }
 .lang-btn {
-  background: #b1001a;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-bg-light);
   border: none;
   border-radius: 20px;
   padding: 8px 22px;
@@ -71,8 +72,8 @@
   outline-offset: 2px;
 }
 .lang-btn:hover, .lang-btn:focus {
-  background: #fff;
-  color: #b1001a;
+  background: var(--color-accent-orange);
+  color: var(--color-bg-light);
   transform: scale(1.08);
 }
 @media (min-width: 900px) {

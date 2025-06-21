@@ -1,15 +1,15 @@
 import React from 'react';
-import Gallery from './Gallery';
 import { motion } from 'framer-motion';
 import VariableProximity from './VariableProximity';
 import { useLanguage } from './LanguageContext';
+import PortfolioGrid from './PortfolioGrid';
 
 const texts = {
   es: {
-    hero: 'Galería de Proyectos',
+    hero: 'Portafolio de Proyectos',
   },
   en: {
-    hero: 'Project Gallery',
+    hero: 'Project Portfolio',
   },
 };
 
@@ -22,7 +22,7 @@ export default function GalleryPage() {
         style={{
           width: '100vw',
           minHeight: '320px',
-          background: `url('/fondo4.jpg') center/cover no-repeat`,
+          background: `url('/FONDOINICIO.jpg') center/cover no-repeat`,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -61,7 +61,7 @@ export default function GalleryPage() {
             justifyContent: 'center',
           }}>
             <VariableProximity
-              label={lang === 'es' ? 'Galería' : 'Gallery'}
+              label={lang === 'es' ? 'Portafolio' : 'Portfolio'}
               className={'variable-proximity variable-proximity-demo'}
               fromFontVariationSettings="'wght' 400, 'opsz' 9"
               toFontVariationSettings="'wght' 1000, 'opsz' 40"
@@ -88,8 +88,27 @@ export default function GalleryPage() {
         </div>
       </section>
       <div className="section gallery-page">
-        <motion.h2 initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>{texts[lang].hero}</motion.h2>
-        <Gallery lang={lang} />
+        <motion.h2 
+          initial={{ opacity: 0, x: -40 }} 
+          whileInView={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.6, type: 'spring', stiffness: 80, damping: 12 }}
+          style={{
+            fontSize: 38,
+            fontWeight: 800,
+            letterSpacing: 1.5,
+            color: '#004AAD',
+            textShadow: '0 2px 16px #fff, 0 4px 32px #0002',
+            marginBottom: 32,
+            textAlign: 'center',
+            background: 'linear-gradient(90deg, #004AAD 60%, #2ECC71 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}
+        >
+          {texts[lang].hero}
+        </motion.h2>
+        <PortfolioGrid />
       </div>
     </>
   );

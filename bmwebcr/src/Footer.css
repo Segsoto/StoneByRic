@@ -1,6 +1,6 @@
 .footer-main {
-  background: #18181b;
-  color: #fff;
+  background: var(--color-secondary);
+  color: var(--color-bg-light);
   padding: 40px 0 0 0;
   width: 100vw;
   box-shadow: 0 -2px 16px rgba(0,0,0,0.12);
@@ -39,14 +39,14 @@
   gap: 18px;
 }
 .footer-link {
-  color: #fff;
+  color: var(--color-bg-light);
   text-decoration: none;
   font-size: 1rem;
   opacity: 0.85;
   transition: color 0.2s, opacity 0.2s;
 }
 .footer-link:hover {
-  color: #b1001a;
+  color: var(--color-accent-orange);
   opacity: 1;
 }
 .footer-social {
@@ -58,13 +58,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #23232a;
+  background: var(--color-primary);
+  color: var(--color-bg-light);
   width: 40px;
   height: 40px;
   transition: background 0.2s;
 }
 .footer-social-icon:hover {
-  background: #b1001a;
+  background: var(--color-accent-orange);
 }
 .footer-bottom {
   text-align: center;
